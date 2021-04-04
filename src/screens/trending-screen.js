@@ -1,18 +1,35 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native';
+import { Text } from 'react-native-elements';
+import CustomHeader from '../components/custom-header.component';
 import ReposItems from '../components/repos-items.component';
+import Axios from 'axios';
 
 const TrendingScreen = () =>{
+
+    const getRepos = async () =>{
+        await Axios.get()
+            .then(response => {
+                console.log('response return : ', response)
+            })
+            .catch((error) => console.log('error getting repos : ', error.message))
+    }
+
     return(
-        <ReposItems />
+        <>
+            <CustomHeader title="Trending Repos" />
+            <View style={styles.trending_container}>
+                <ReposItems />
+            </View>
+        </>
     )
 }
 
 const styles = StyleSheet.create({
-    home_container:{
+    trending_container:{
         flex:1,
         backgroundColor:'white'
-    }
+    },
 })
 
 export default TrendingScreen
