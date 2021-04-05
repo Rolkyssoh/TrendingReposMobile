@@ -25,7 +25,7 @@ const App = () => {
           initialParams={{ icon : 'star'}}
         />
         <Tab.Screen 
-          name="Setting" 
+          name="Settings" 
           component={SettingScreen} 
           initialParams={{ icon : 'settings-sharp'}}
         />

@@ -5,7 +5,7 @@ import { Text } from 'react-native-elements';
 const CustomHeader = ({title}) => {
     return(
         <View style={styles.custom_header}>
-            <Text>{title}</Text>
+            <Text h4>{title}</Text>
         </View>
     )
 };
